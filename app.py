@@ -58,7 +58,9 @@ def create_user_data(email, password):
     password = password.encode('utf-8')
     pass_hash = bcrypt.hashpw(password, bcrypt.gensalt())
     pass_hash_decoded = pass_hash.decode('utf8')
+    print("User created")
     new_user = User(email, pass_hash_decoded)
+    print("Attempting to add to DB")
     db.session.add(new_user)
 
 @app.route('/CreateUser', methods=["POST"])
