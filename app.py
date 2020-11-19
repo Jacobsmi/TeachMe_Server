@@ -67,6 +67,7 @@ def create_user():
         create_user_data(
             request.json['email'], request.json['password']
         )
+        print("Created the user")
         # Add the current user to the database
         db.session.commit()
         # Get a JWT access token
