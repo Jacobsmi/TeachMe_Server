@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 CORS(app, supports_credentials=True)
 # put database credentials in the app's constant
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 app.config['SECRET_KEY'] = os.getenv('JWT_KEY')
