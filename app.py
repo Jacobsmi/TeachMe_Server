@@ -120,5 +120,5 @@ def logout():
     unset_jwt_cookies(resp)
     return resp, 200
 
-
-app.run()
+if __name__ == '__main__':
+    app.run()
