@@ -121,4 +121,4 @@ def logout():
     return resp, 200
 
 
-app.run(debug=True)
+app.run()
