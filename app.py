@@ -81,7 +81,8 @@ def create_user():
     except exc.IntegrityError as e:
         return jsonify(error='E-Mail is not unique')
 
-    except:
+    except Exception as e:
+        print("UNDEFINED EXCEPTION", e)
         return jsonify(error='Undefined Error')
 
 
