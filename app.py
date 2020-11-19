@@ -24,6 +24,9 @@ from flask_jwt_extended import (
 db.init_app(app)
 jwt = JWTManager(app)
 
+@app.route('/')
+def home():
+    return jsonify(working=True), 200
 
 @app.route('/refresh', methods=['POST'])
 @jwt_refresh_token_required
